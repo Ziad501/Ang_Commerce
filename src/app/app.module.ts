@@ -3,17 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { CatnavigationComponent } from './catnavigation/catnavigation.component';
+
+import { HomeModule } from './home/home.module';
+import { HeaderComponent } from './home/components/header/header.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    CatnavigationComponent
+    NotfoundComponent, 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HomeModule,
     AppRoutingModule,FontAwesomeModule
   ],
   providers: [],

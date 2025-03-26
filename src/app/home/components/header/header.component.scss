@@ -79,4 +79,33 @@ $search-bar-border: none;
         margin-right: 0.5em;
     }
 }
-
+.white-icon {
+    color: white; /* Forces SVG to be white */
+  }
+  
+  /* Optional: Base styling */
+  .user-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .cart-icon {
+    color: #333; /* Default color (change to white if needed) */
+    transition: color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    color: #ffffff; /* Blue on hover */
+  }
+  .cart-wishlist ul {
+    display: flex; /* Makes the list items inline */
+    gap: 10px; /* Adds space between icons */
+    list-style: none; /* Removes default list styles */
+    align-items: center; /* Aligns icons properly */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart-wishlist .list-item {
+    display: flex; /* Ensures each list item behaves properly */
+    align-items: center; /* Aligns the icon vertically */
+  }
