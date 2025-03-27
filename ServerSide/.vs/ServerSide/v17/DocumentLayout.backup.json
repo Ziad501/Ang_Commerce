@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\eStore\\Ang_Commerce\\ServerSide\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|solutionrelative:estoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|solutionrelative:estoreapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|solutionrelative:estoreapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|solutionrelative:estoreapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|solutionrelative:estoreapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|solutionrelative:estoreapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|solutionrelative:estoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DC90091-2438-D1F2-F7FA-A372BE2DA352}|eStoreApi\\eStoreApi.csproj|d:\\estore\\ang_commerce\\serverside\\estoreapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,56 +30,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Program.cs",
               "RelativeDocumentMoniker": "eStoreApi\\Program.cs",
               "ToolTip": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Program.cs",
               "RelativeToolTip": "eStoreApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T21:25:46.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Models\\Product.cs",
               "RelativeDocumentMoniker": "eStoreApi\\Models\\Product.cs",
               "ToolTip": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Models\\Product.cs",
               "RelativeToolTip": "eStoreApi\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T21:25:17.182Z"
+              "WhenOpened": "2025-03-27T21:25:17.182Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Models\\Category.cs",
               "RelativeDocumentMoniker": "eStoreApi\\Models\\Category.cs",
               "ToolTip": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Models\\Category.cs",
               "RelativeToolTip": "eStoreApi\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T21:24:36.067Z"
+              "WhenOpened": "2025-03-27T21:24:36.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "eStoreApi\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\Data\\AppDbContext.cs",
               "RelativeToolTip": "eStoreApi\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T21:23:25Z"
+              "WhenOpened": "2025-03-27T21:23:25Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
