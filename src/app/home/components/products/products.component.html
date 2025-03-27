@@ -1,9 +1,24 @@
-<div class="main-product-container">
+<!-- <div class="main-product-container">
     <div class="mx-4 p-3 product-card">
       <div><img src="/assets/images/shop-1.jpg" /></div>
       <div class="product-info">
         <h5><a href="#">Jacket</a></h5>
         <p>$45</p>
+      </div>
+    </div>
+  </div> -->
+  <div class="main-product-container">
+    <div *ngFor="let product of products" class="mx-4 p-3 product-card">
+      <div class="product-image-container">
+        <img
+          [src]="'/assets/images/' + product.product_img + '.jpg'"
+        />
+      </div>
+      <div class="product-info">
+        <h5>
+          <a href="#">{{ product.product_name }}</a>
+        </h5>
+        <p class="product-price">{{ product.price | currency }}</p>
       </div>
     </div>
   </div>
