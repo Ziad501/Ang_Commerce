@@ -15,11 +15,17 @@ namespace eStoreApi.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetProducts()
+    [HttpGet]
+    public async Task<IActionResult> GetProducts()
+    {
+        var products = await _context.Products.Include(p => p.Category).ToListAsync();
+
+        if (products == null || !products.Any()) 
         {
-            var products = await _context.Products.Include(p => p.Category).ToListAsync();
-            return Ok(products);
+        return NotFound("No products found.");
+        }
+
+        return Ok(products);
         }
     }
 }
