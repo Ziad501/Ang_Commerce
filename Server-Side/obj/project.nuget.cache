@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IlgSa1iw3yw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ziadm\\OneDrive\\Desktop\\eStore\\Ang_Commerce\\Server-Side\\Server-Side.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ziadm\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "C:\\Users\\ziadm\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
