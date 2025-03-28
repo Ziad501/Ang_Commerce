@@ -4,14 +4,18 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers(); // ✅ Ensure controllers are registered
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+    });
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-           .LogTo(Console.WriteLine, LogLevel.Information));
-
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,21 +26,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseRouting(); // ✅ Required for controllers to work
 app.UseAuthorization();
-
-app.UseEndpoints(endpoints =>  // ✅ Ensures API controllers are registered
+app.MapControllers();
+app.MapGet("/", async (AppDbContext context) =>
 {
-    endpoints.MapControllers(); // ✅ This must be added
+    return Results.Ok(await context.Products.ToListAsync());
 });
-
-// Seed database (optional, for debugging)
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.EnsureCreated();
-}
-
-// Run the app
 app.Run();

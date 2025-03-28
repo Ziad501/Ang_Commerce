@@ -1,23 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace eStoreApi.Models;
-
-public partial class Product
+namespace eStoreApi.Models
 {
-    public int Id { get; set; }
+    [Table("products", Schema = "estore")]
+    public class Product
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
 
-    public string? ProductName { get; set; }
+        [MaxLength(45)]
+        public string? ProductName { get; set; }
 
-    public string? ProductDescription { get; set; }
+        [MaxLength(100)]
+        public string? ProductDescription { get; set; }
 
-    public decimal? Price { get; set; }
+        public decimal? Price { get; set; }
 
-    public int? Ratings { get; set; }
+        public int? Ratings { get; set; }
 
-    public int? CategoryId { get; set; }
+        public int? CategoryId { get; set; }
 
-    public string? ProductImg { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual Category? Category { get; set; }
 
-    public virtual Category? Category { get; set; }
+        [MaxLength(45)]
+        public string? ProductImg { get; set; }
+    }
 }
