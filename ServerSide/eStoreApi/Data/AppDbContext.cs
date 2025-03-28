@@ -1,4 +1,4 @@
-using eStoreApi.Models;
+﻿using eStoreApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace eStoreApi.Data
@@ -12,63 +12,42 @@ namespace eStoreApi.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>(entity =>
-            {
-                entity.HasKey(e => e.Id).HasName("PK__categori__3213E83FFD1BFE48");
+            modelBuilder.HasDefaultSchema("estore");
 
-                entity.ToTable("categories", "estore");
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasColumnType("decimal(10,2)");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
-                entity.Property(e => e.Category1)
-                    .HasMaxLength(45)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnName("category");
-                entity.Property(e => e.ParentCategoryId)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnName("parent_category_id");
-            });
+            modelBuilder.Entity<Category>()
+            .HasMany(c => c.SubCategories)
+            .WithOne(c => c.ParentCategory)
+            .HasForeignKey(c => c.ParentCategoryId)
+            .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Product>(entity =>
-            {
-                entity.HasKey(e => e.Id).HasName("PK__products__3213E83F2B2B7AC6");
 
-                entity.ToTable("products", "estore");
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.NoAction);
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
-                entity.Property(e => e.CategoryId)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnName("category_id");
-                entity.Property(e => e.Price)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnType("decimal(10, 0)")
-                    .HasColumnName("price");
-                entity.Property(e => e.ProductDescription)
-                    .HasMaxLength(100)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnName("product_description");
-                entity.Property(e => e.ProductImg)
-                    .HasMaxLength(45)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnName("product_img");
-                entity.Property(e => e.ProductName)
-                    .HasMaxLength(45)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnName("product_name");
-                entity.Property(e => e.Ratings)
-                    .HasDefaultValueSql("(NULL)")
-                    .HasColumnName("ratings");
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, Name = "Men", ParentCategoryId = null },
+                new Category { Id = 2, Name = "Women", ParentCategoryId = null },
+                new Category { Id = 3, Name = "Kids", ParentCategoryId = null },
+                new Category { Id = 4, Name = "Casual Wear", ParentCategoryId = 1 },
+                new Category { Id = 5, Name = "Party Wear", ParentCategoryId = 2 },
+                new Category { Id = 6, Name = "Foot Wear", ParentCategoryId = 2 },
+                new Category { Id = 7, Name = "Accessories", ParentCategoryId = 3 }
 
-                entity.HasOne(d => d.Category).WithMany(p => p.Products)
-                    .HasForeignKey(d => d.CategoryId)
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK_Products_Categories");
-            });
 
-            base.OnModelCreating(modelBuilder);
+            );
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product { Id = 1, ProductName = "Jacket", ProductDescription = "Jacket description goes here", Price = 100.00m, Ratings = 5, CategoryId = 5, ProductImg = "shop-1.jpg" },
+                new Product { Id = 2, ProductName = "Purse", ProductDescription = "Very nice purse", Price = 25.00m, Ratings = 3, CategoryId = 7, ProductImg = "shop-2.jpg" },
+                new Product { Id = 3, ProductName = "Dress", ProductDescription = "Nice Party Dress", Price = 45.00m, Ratings = 4, CategoryId = 5, ProductImg = "shop-3.jpg" }
+            );
         }
     }
 }

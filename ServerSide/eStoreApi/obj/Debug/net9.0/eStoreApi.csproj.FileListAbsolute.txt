@@ -139,3 +139,4 @@ D:\eStore\Ang_Commerce\ServerSide\eStoreApi\obj\Debug\net9.0\refint\eStoreApi.dl
 D:\eStore\Ang_Commerce\ServerSide\eStoreApi\obj\Debug\net9.0\eStoreApi.pdb
 D:\eStore\Ang_Commerce\ServerSide\eStoreApi\obj\Debug\net9.0\eStoreApi.genruntimeconfig.cache
 D:\eStore\Ang_Commerce\ServerSide\eStoreApi\obj\Debug\net9.0\ref\eStoreApi.dll
+D:\eStore\Ang_Commerce\ServerSide\eStoreApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
