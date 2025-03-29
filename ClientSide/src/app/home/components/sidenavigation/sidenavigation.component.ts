@@ -18,6 +18,6 @@ export class SidenavigationComponent {
   getCategories(parentCategoryId?: number): Category[] {
     return this.categories.filter(
       (category) => category.parent_category_id === parentCategoryId
-    );
-  }
+);
+}
 }

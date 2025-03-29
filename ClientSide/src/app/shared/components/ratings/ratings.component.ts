@@ -29,6 +29,6 @@ export class RatingsComponent {
 
     for (let i: number = this.stars.length; i < 5; i++) {
       this.stars.push(faStarEmpty);
-    }
-  }
+}
+}
 }

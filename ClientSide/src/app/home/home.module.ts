@@ -15,4 +15,4 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,FontAwesomeModule,CatnavigationComponent,HeaderComponent  
   ,SharedModule]
 })
-export class HomeModule { }
+export class HomeModule{}
