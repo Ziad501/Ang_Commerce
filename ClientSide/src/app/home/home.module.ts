@@ -13,6 +13,7 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [HomeComponent, SidenavigationComponent, ProductsComponent],
   imports: [
     CommonModule,FontAwesomeModule,CatnavigationComponent,HeaderComponent  
-  ,SharedModule]
+  ,SharedModule],
+  exports :[HeaderComponent]
 })
 export class HomeModule { }
