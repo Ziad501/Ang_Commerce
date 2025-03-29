@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService, Product } from '../../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
+  imports: [CommonModule]
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];

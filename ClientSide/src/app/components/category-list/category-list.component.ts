@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService, Category } from '../../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
-  styleUrls: ['./category-list.component.scss']
+  styleUrls: ['./category-list.component.scss'],
+  imports: [CommonModule]
 })
 export class CategoryListComponent implements OnInit {
   categories: Category[] = [];
