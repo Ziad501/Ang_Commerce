@@ -15,4 +15,4 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   exports: [
     RatingsComponent]
 })
-export class SharedModule { }
+export class SharedModule{}
