@@ -1,34 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { HomeModule } from './home/home.module';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { CategoryListComponent } from './components/category-list/category-list.component';
 import { HeaderComponent } from './home/components/header/header.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
-    AppComponent,         // ✅ Declare AppComponent
-    NotfoundComponent,    
-    ProductListComponent, // ✅ Declare ProductListComponent
-    CategoryListComponent,// ✅ Declare CategoryListComponent
-    HeaderComponent       // ✅ Declare HeaderComponent
+    AppComponent,
+    NotfoundComponent, 
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    HomeModule,  
-    RouterModule  // ✅ Ensure RouterModule is imported for <router-outlet>
+    BrowserModule,HomeModule,
+    AppRoutingModule,FontAwesomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent] // ✅ Bootstrapping AppComponent
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { }

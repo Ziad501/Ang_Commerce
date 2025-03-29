@@ -11,9 +11,7 @@
         transition-duration: 0.2s;
     }
 
-    &:hover {
-        &::after {
+    &:hover::after {
             transform: scaleX($width);
         }
     }
-}

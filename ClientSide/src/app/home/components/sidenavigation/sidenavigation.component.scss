@@ -1,5 +1,4 @@
-@import "../../../../styles.scss";
-
+@use "../../../../styles.scss" as *;
 .side-navigation {
     margin-top: 1em;
     padding: 0.6em;
@@ -30,7 +29,7 @@
                 text-decoration: none;
                 color: black;
                 @include underline-transition(0.5);
-                
+
             }
         }
     }

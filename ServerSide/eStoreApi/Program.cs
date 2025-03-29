@@ -19,10 +19,11 @@ builder.WebHost.ConfigureKestrel(serverOptions =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
-        policy => policy.WithOrigins("http://localhost:4300") 
+        policy => policy.WithOrigins("http://localhost:4200") 
                         .AllowAnyMethod()
                         .AllowAnyHeader());
 });
+
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -40,7 +41,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.UseExceptionHandler("/error");
 app.UseHttpsRedirection();
 app.UseCors("AllowAngularApp");
@@ -52,5 +54,6 @@ app.MapGet("/", async (AppDbContext context) =>
 {
     return Results.Ok(await context.Products.ToListAsync());
 });
+app.MapFallbackToFile("index.html");
 
 app.Run();
