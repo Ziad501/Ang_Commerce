@@ -7,12 +7,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [HomeComponent, SidenavigationComponent, ProductsComponent],
   imports: [
     CommonModule,FontAwesomeModule,CatnavigationComponent,HeaderComponent  
-  ,SharedModule]
+  ,SharedModule,HttpClientModule]
 })
 export class HomeModule{}
