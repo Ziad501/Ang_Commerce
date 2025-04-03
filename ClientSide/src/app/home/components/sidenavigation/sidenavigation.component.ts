@@ -12,12 +12,17 @@ export class SidenavigationComponent {
   categories: Category[] = [];
   
   constructor(categoryService: CategoryService) {
-    this.categories = categoryService.getAllCategories();
+    categoryService.getAllCategories().subscribe((categories) => {
+      this.categories = categories;
+      console.log(categories);
+    });
   }
 
   getCategories(parentCategoryId?: number): Category[] {
-    return this.categories.filter(
-      (category) => category.parent_category_id === parentCategoryId
-);
-}
+    return this.categories.filter((category) =>
+      parentCategoryId != null
+        ? category.parentCategoryId === parentCategoryId
+        : category.parentCategoryId === null
+    );
+  }
 }
