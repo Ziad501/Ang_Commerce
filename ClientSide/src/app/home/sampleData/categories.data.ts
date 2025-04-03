@@ -3,34 +3,37 @@ import { Category } from '../types/category.type';
 export const categories: Category[] = [
   {
     id: 1,
-    category: 'Men'
+    name: 'Men',
+    parentCategoryId: null
   },
   {
     id: 2,
-    category: 'Women'
+    name: 'Women',
+    parentCategoryId: null
   },
   {
     id: 3,
-    category: 'Kids'
+    name: 'Kids',
+    parentCategoryId: null
   },
   {
     id: 4,
-    category: 'Casual Wear',
-    parent_category_id: 1
+    name: 'Casual Wear',
+    parentCategoryId: 1
   },
   {
     id: 5,
-    category: 'Party Wear',
-    parent_category_id: 2
+    name: 'Party Wear',
+    parentCategoryId: 2
   },
   {
     id: 6,
-    category: 'Foot Wear',
-    parent_category_id: 2
+    name: 'Foot Wear',
+    parentCategoryId: 2
   },
   {
     id: 7,
-    category: 'Accessories',
-    parent_category_id: 3
+    name: 'Accessories',
+    parentCategoryId: 3
   }
 ];

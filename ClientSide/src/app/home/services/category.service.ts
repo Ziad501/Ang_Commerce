@@ -5,14 +5,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CategoryService {
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
 
-  getAllCategories(): Observable<Category[]> {
-    return  this.http.get<Category[]>('https://localhost:7014/api/Categories'
-);
+  getAllCategories(): Category[] {
+    return  categories;
 }
 }

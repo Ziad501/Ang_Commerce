@@ -1,5 +1,6 @@
 using eStoreApi.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
-        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     });
+
 
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
@@ -41,11 +43,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+<<<<<<< HEAD
+=======
 app.UseExceptionHandler("/error");
+>>>>>>> 7e958f3e18f1c79c194329ac778d43bc437a68b7
 app.UseHttpsRedirection();
 app.UseCors("AllowAngularApp");
 app.UseAuthorization();
 app.MapControllers();
 
+<<<<<<< HEAD
+// Test endpoint for fetching all products
+=======
+>>>>>>> 7e958f3e18f1c79c194329ac778d43bc437a68b7
 
 app.Run();
