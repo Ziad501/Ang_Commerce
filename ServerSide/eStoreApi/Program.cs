@@ -12,9 +12,9 @@ builder.Services.AddControllers()
 
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    serverOptions.ListenAnyIP(5230);
     serverOptions.ListenAnyIP(7014, listenOptions => listenOptions.UseHttps());
 });
+
 
 builder.Services.AddCors(options =>
 {
@@ -41,19 +41,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseDefaultFiles();
-app.UseStaticFiles();
 app.UseExceptionHandler("/error");
 app.UseHttpsRedirection();
 app.UseCors("AllowAngularApp");
 app.UseAuthorization();
 app.MapControllers();
 
-// Test endpoint for fetching all products
-app.MapGet("/", async (AppDbContext context) =>
-{
-    return Results.Ok(await context.Products.ToListAsync());
-});
-app.MapFallbackToFile("index.html");
 
 app.Run();
