@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WQMOOUdpXFY=",
+  "dgSpecHash": "rFhvlSPPnyM=",
   "success": true,
-  "projectFilePath": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj",
+  "projectFilePath": "D:\\repos\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ziadm\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ziadm\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
