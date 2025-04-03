@@ -17,6 +17,7 @@ builder.WebHost.ConfigureKestrel(serverOptions =>
     serverOptions.ListenAnyIP(7014, listenOptions => listenOptions.UseHttps());
 });
 
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
@@ -42,11 +43,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+<<<<<<< HEAD
+=======
+app.UseExceptionHandler("/error");
+>>>>>>> 7e958f3e18f1c79c194329ac778d43bc437a68b7
 app.UseHttpsRedirection();
 app.UseCors("AllowAngularApp");
 app.UseAuthorization();
 app.MapControllers();
 
+<<<<<<< HEAD
 // Test endpoint for fetching all products
+=======
+>>>>>>> 7e958f3e18f1c79c194329ac778d43bc437a68b7
 
 app.Run();

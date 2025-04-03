@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj": {}
+    "D:\\repos\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj": {}
   },
   "projects": {
-    "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj": {
+    "D:\\repos\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj",
+        "projectUniqueName": "D:\\repos\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj",
         "projectName": "eStoreApi",
-        "projectPath": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj",
+        "projectPath": "D:\\repos\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\eStoreApi.csproj",
         "packagesPath": "C:\\Users\\ziadm\\.nuget\\packages\\",
-        "outputPath": "D:\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\obj\\",
+        "outputPath": "D:\\repos\\eStore\\Ang_Commerce\\ServerSide\\eStoreApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
