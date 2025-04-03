@@ -9,9 +9,11 @@ import { Observable } from 'rxjs';
 })
 export class CategoryService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) {}
 
-  getAllCategories(): Category[] {
-    return  categories;
-}
+  getAllCategories(): Observable<Category[]> {
+    return this.httpClient.get<Category[]>(
+      'https://localhost:7014/api/Categories'
+    );
+  }
 }
