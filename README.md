@@ -38,7 +38,7 @@ To run this project locally, follow these steps:
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/Michael-Moris/E-Commerce-App.git
+git clone https://github.com/Ziad501/Ang_Commerce.git
 cd E-Commerce-App
 
 # 2️⃣ Install dependencies
@@ -63,8 +63,7 @@ npm install -g @angular/cli
 
 ## 📸 Live Demo & Source Code
 
-🔗 **Live Preview:** [https://freshcart-online-ecommerce.vercel.app](https://freshcart-online-ecommerce.vercel.app)  
-📂 **GitHub Repository:** [https://github.com/Michael-Moris/E-Commerce-App](https://github.com/Michael-Moris/E-Commerce-App)
+📂 **GitHub Repository:** https://github.com/Ziad501/Ang_Commerce
 
 ---
 
