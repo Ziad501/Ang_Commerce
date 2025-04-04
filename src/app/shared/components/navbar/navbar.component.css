@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    .cart-count {
+        right: 0px;
+        position: relative;
+    }
+
+    .customT {
+        top: calc(var(--spacing) * -4)
+    }
+
+    .customE {
+        inset-inline-end: calc(var(--spacing) * -1);
+    }
+}
+
+#dropdownHoverButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
